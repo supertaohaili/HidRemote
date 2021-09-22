@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_weight="4"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tv_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1.6"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="Tab"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/s_text_size" />
+
+        <Button
+            android:id="@+id/tv_q"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="Q"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/s_text_size" />
+
+        <Button
+            android:id="@+id/tv_w"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="W"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/s_text_size" />
+
+        <Button
+            android:id="@+id/tv_e"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="E"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/s_text_size" />
+
+        <Button
+            android:id="@+id/tv_r"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="R"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/s_text_size" />
+
+        <Button
+            android:id="@+id/tv_t"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="T"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/s_text_size" />
+
+        <Button
+            android:id="@+id/tv_y"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="Y"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/s_text_size" />
+
+        <Button
+            android:id="@+id/tv_u"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="U"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/s_text_size"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/tv_i"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="I"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/s_text_size" />
+
+        <Button
+            android:id="@+id/tv_o"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="O"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/s_text_size" />
+
+        <Button
+            android:id="@+id/tv_p"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="P"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/s_text_size" />
+
+        <Button
+            android:id="@+id/tv_dakuohao1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="{["
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/s_text_size" />
+
+        <Button
+            android:id="@+id/tv_dakuohao2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="]}"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/s_text_size" />
+
+        <Button
+            android:id="@+id/tv_xiekuang"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="@string/xiegang"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/s_text_size" />
+    </LinearLayout>
+</merge>
+

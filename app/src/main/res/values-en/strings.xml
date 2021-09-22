@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name" translatable="false">蓝牙遥控器</string>
+    <string name="night_mode">夜间模式</string>
+    <string name="switch_language">切换语言</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="about_us">关于我们</string>
+
+    <string name="tab_home">设备</string>
+    <string name="tab_us">设置</string>
+    <string name="common_problem">常见问题</string>
+    <string name="feekback">我要反馈</string>
+    <string name="scan_device">扫描设备</string>
+    <string name="device_edit">设备编辑</string>
+    <string name="xiegang">\\|</string>
+
+
+</resources>

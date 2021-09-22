@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_window"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+    <View
+        android:id="@+id/llt_content"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/bg_window" />
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="35dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_shang"
+            android:layout_width="match_parent"
+            android:background="@drawable/shape_key_sel_c5"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="上翻页"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/m_text_size"
+            android:layout_weight="5" />
+
+        <Button
+            android:id="@+id/btn_xia"
+            android:layout_width="match_parent"
+            android:background="@drawable/shape_key_sel_c5"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="下翻页"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/m_text_size"
+            android:layout_weight="5" />
+
+        <Button
+            android:id="@+id/tv_quanping"
+            android:layout_width="match_parent"
+            android:background="@drawable/shape_key_sel_c5"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="全屏"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/m_text_size"
+            android:layout_weight="2" />
+
+        <Button
+            android:id="@+id/tv_tuichuquanping"
+            android:layout_width="match_parent"
+            android:background="@drawable/shape_key_sel_c5"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="退出全屏"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/m_text_size"
+            android:layout_weight="2" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

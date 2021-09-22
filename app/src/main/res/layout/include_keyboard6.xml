@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_weight="4"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tv_ctrl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="Ctrl"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/s_text_size" />
+
+        <Button
+            android:id="@+id/tv_fn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="鼠标"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/t_text_size" />
+
+        <Button
+            android:id="@+id/tv_win"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="Win"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/s_text_size" />
+
+        <Button
+            android:id="@+id/tv_alt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1.2"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="Alt"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/s_text_size" />
+
+        <Button
+            android:id="@+id/tv_space"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="4.6"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="Space"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/s_text_size" />
+
+        <Button
+            android:id="@+id/tv_alt2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1.2"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="Alt"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/s_text_size"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/tv_ctrl2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="Ctrl"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/s_text_size" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/tv_xiangzuo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_key_sel_c5"
+                android:gravity="center"
+                android:text="←"
+                android:textAllCaps="false"
+                android:textColor="@color/main_text"
+                android:textSize="@dimen/s_text_size" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/tv_xiangshang"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_key_sel_c5"
+                android:gravity="center"
+                android:text="↑"
+                android:textAllCaps="false"
+                android:textColor="@color/main_text"
+                android:textSize="@dimen/s_text_size" />
+
+            <Button
+                android:id="@+id/tv_xiangxia"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_key_sel_c5"
+                android:gravity="center"
+                android:text="↓"
+                android:textAllCaps="false"
+                android:textColor="@color/main_text"
+                android:textSize="@dimen/s_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/tv_xiangyou"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_key_sel_c5"
+                android:gravity="center"
+                android:text="→"
+                android:textAllCaps="false"
+                android:textColor="@color/main_text"
+                android:textSize="@dimen/s_text_size" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</merge>
+

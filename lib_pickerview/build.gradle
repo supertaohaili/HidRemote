@@ -1,0 +1,36 @@
+apply from: '../maven.gradle'
+
+dependencies {
+    implementation rootProject.ext.dependencies["appcompat"]
+    api project(':lib_wheelview')
+}
+
+apply plugin: 'maven'
+
+ext {
+    GITHUB_REPO_PATH = "E:\\arr"
+    PUBLISH_GROUP_ID = 'com.thl'
+    PUBLISH_ARTIFACT_ID = 'lib_pickerview'
+    PUBLISH_VERSION = '1.0.0'
+}
+
+uploadArchives {
+    repositories.mavenDeployer {
+        def deployPath = file(project.GITHUB_REPO_PATH)
+        repository(url:"file://${deployPath.absolutePath}")
+        pom.project {
+            groupId project.PUBLISH_GROUP_ID
+            artifactId project.PUBLISH_ARTIFACT_ID
+            version project.PUBLISH_VERSION
+        }
+    }
+}
+
+task androidSourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.sourceFiles
+}
+
+artifacts {
+    archives androidSourcesJar
+}

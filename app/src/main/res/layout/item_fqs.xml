@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:background="@color/bg_item"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/item_padding"
+    android:paddingTop="@dimen/item_margin"
+    android:paddingRight="@dimen/item_padding"
+    android:paddingBottom="@dimen/item_margin">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/item_margin"
+        android:lineSpacingExtra="3dp"
+        android:maxLines="2"
+        android:text="问：品牌：三星，型号：BLD-2324，类型：电视，内容：码库错误 反馈邮箱：13434@qq.com"
+        android:textColor="@color/main_text"
+        android:textSize="@dimen/m_text_size" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawableRight="@mipmap/gray_in" />
+
+
+</RelativeLayout>

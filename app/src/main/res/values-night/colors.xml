@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#212121</color>
+    <color name="colorPrimaryDark">#009788</color>
+    <color name="colorAccent">#009788</color>
+
+    <!--bottombar 切换颜色-->
+    <color name="tab_unselect">#bababa</color>
+    <color name="tab_select">#009788</color>
+
+    <!--窗口背景-->
+    <color name="bg_window">#212121</color>
+    <!--item背景-->
+    <color name="bg_un_item">#9E9B9B</color>
+    <color name="bg_item">#303030</color>
+    <!-- 主标题-->
+    <color name="main_text">#d6d6d6</color>
+    <color name="red_text">#F60808</color>
+
+    <!--副标题-->
+    <color name="subtitle">#bababa</color>
+    <!--分割线-->
+    <color name="dividing_line">#202020</color>
+    <!--主色调-->
+    <color name="main_color">#009788</color>
+
+    <color name="subtitle_color">#05B6A5</color>
+
+    <color name="x_shadow_color">#e3e6c7</color>
+    <color name="x_checkline_color">#1c1c1c</color>
+    <color name="x_button_color">#ffffff</color>
+    <color name="x_checked_color">#3c4145</color>
+
+
+</resources>

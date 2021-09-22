@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_window"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <View
+        android:id="@+id/llt_content"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/bg_window" />
+
+    <LinearLayout
+        android:id="@+id/llt_pad"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@drawable/shape_key_sel_c5"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="触摸面板"
+            android:letterSpacing="1"
+            android:textAllCaps="false"
+            android:textColor="@color/subtitle"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="4dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tv_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="左键"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/m_text_size" />
+
+        <RelativeLayout
+            android:id="@+id/rlt_mid"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="3"
+            android:background="@drawable/shape_key_sel_c5"
+            android:padding="2dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="-滚轮-"
+                android:letterSpacing="1"
+                android:textColor="@color/main_text"
+                android:textSize="@dimen/l_text_size" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/tv_rigth"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/shape_key_sel_c5"
+            android:gravity="center"
+            android:text="右键"
+            android:textAllCaps="false"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/m_text_size" />
+    </LinearLayout>
+
+
+</LinearLayout>

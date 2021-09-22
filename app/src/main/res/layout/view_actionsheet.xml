@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_item"
+        android:gravity="center"
+        android:minHeight="45dp"
+        android:paddingLeft="@dimen/item_margin"
+        android:paddingTop="10dp"
+        android:paddingRight="@dimen/item_margin"
+        android:paddingBottom="10dp"
+        android:textColor="@color/main_text"
+        android:textSize="@dimen/m_text_size"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:background="@color/bg_window"
+        android:id="@+id/sLayout_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none">
+
+        <LinearLayout
+            android:id="@+id/lLayout_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/txt_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/item_sel_c0"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/m_text_size" />
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+rootProject.name='HidRemote'
+
+include ':app'
+include ':lib_bar'
+include ':lib_size'
+include ':lib_base'
+include ':lib_fragment'
+include ':lib_permission'
+include ':lib_sdlv'
+include ':lib_okgo'
+include ':lib_banner'
+include ':lib_pickerview'
+include ':lib_wheelview'

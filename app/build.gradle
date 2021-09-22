@@ -1,0 +1,172 @@
+apply plugin: 'com.android.application'
+apply from: '../and_res_guard.gradle'
+
+File signPropertiesFile = rootProject.file('sign/keystore.properties')
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId rootProject.ext.android["applicationId"]
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        multiDexEnabled true
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
+    }
+
+    if (signPropertiesFile.exists()) {
+        Properties properties = new Properties()
+        properties.load(new FileInputStream(signPropertiesFile))
+        signingConfigs {
+            debug {
+                v1SigningEnabled true
+                v2SigningEnabled true
+                storeFile rootProject.file(properties['keystore'])
+                storePassword properties['storePassword']
+                keyAlias properties['keyAlias']
+                keyPassword properties['keyPassword']
+            }
+            release {
+                v1SigningEnabled true
+                v2SigningEnabled true
+                storeFile rootProject.file(properties['keystore'])
+                storePassword properties['storePassword']
+                keyAlias properties['keyAlias']
+                keyPassword properties['keyPassword']
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            versionNameSuffix "-debug"
+            debuggable true
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+
+//            buildConfigField "boolean", "LOG_DEBUG", "false"
+//            debuggable false
+//            minifyEnabled true
+//            zipAlignEnabled true
+//            shrinkResources true
+
+            signingConfig signingConfigs.debug
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            debuggable false
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+
+            signingConfig signingConfigs.release
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    //判断是release还是debug版本
+                    def buildType = variant.buildType.name
+                    //只对Release包起作用，如果不是Release包则不变更输出路径，否则可能导致AS无法自动安装debug包。
+                    if (buildType == "release") {
+                        variant.getPackageApplication().outputDirectory = new File(project.rootDir.absolutePath + "/apks/${releaseTime()}")
+                    }
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        def fileName = outputFile.name.replace("release.apk", "${releaseTime()}.apk")
+                        outputFileName = fileName
+                        println "打包成功：-----------------${fileName}"
+                    }
+                }
+            }
+        }
+    }
+
+//    allprojects {
+//        gradle.projectsEvaluated {
+//            tasks.withType(JavaCompile) {
+//                options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+//            }
+//        }
+//    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs', "../app/libs"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation rootProject.ext.dependencies["appcompat"]
+    implementation rootProject.ext.dependencies["recyclerview"]
+    implementation rootProject.ext.dependencies["glide"]
+    implementation rootProject.ext.dependencies["eventbus"]
+    implementation rootProject.ext.dependencies["fastjson"]
+    implementation rootProject.ext.dependencies["gson"]
+    implementation rootProject.ext.dependencies["crashreport_upgrade"]
+
+    // 友盟统计SDK
+    implementation  'com.umeng.umsdk:common:9.3.8'// 必选
+    implementation  'com.umeng.umsdk:asms:1.2.2'// 必选
+
+//    implementation 'org.litepal.guolindev:core:3.2.3'
+
+    implementation project(':lib_bar')
+    implementation project(':lib_size')
+    implementation project(':lib_base')
+    implementation project(':lib_okgo')
+    implementation project(':lib_permission')
+    implementation project(':lib_banner')
+    implementation project(':lib_sdlv')
+    implementation project(':lib_pickerview')
+    implementation project(':lib_wheelview')
+
+
+
+    //aar 包的形式运行
+//    implementation fileTree(dir: 'libs', include: ['*.aar'])
+//    implementation "androidx.viewpager2:viewpager2:1.0.0"
+//    api rootProject.ext.dependencies["glide"]
+//    api 'com.squareup.okhttp3:okhttp:3.8.1'
+//    api "androidx.concurrent:concurrent-futures:1.1.0"
+//    api "androidx.annotation:annotation-experimental:1.1.0-alpha01"
+//    api "com.squareup.okio:okio:2.9.0"
+//    api "androidx.exifinterface:exifinterface:1.3.2"
+//    api "androidx.camera:camera-lifecycle:1.0.0-rc01"
+//    api "androidx.localbroadcastmanager:localbroadcastmanager:1.0.0"
+//    api "androidx.camera:camera-view:1.0.0-alpha20"
+//    api "androidx.camera:camera-core:1.0.0-beta03"
+//    api "androidx.camera:camera-camera2:1.0.0-rc01"
+//    api "androidx.exifinterface:exifinterface:1.3.2"
+//    api "androidx.transition:transition:1.3.1"
+}

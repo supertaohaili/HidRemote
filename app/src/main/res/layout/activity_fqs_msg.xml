@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_window"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <include layout="@layout/layout_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/item_margin">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_padding"
+            android:text="问：品牌：三星，型号：BLD-2324，类型：电视，内容：码库错误 反馈邮箱：13434@qq.com"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/m_text_size" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_margin"
+            android:background="@color/bg_item"
+            android:orientation="vertical"
+            android:padding="@dimen/item_padding">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="答：码库已添加码库已添加码库已添加码库已添加码库已添加码库已添加码库已添加码库已添加码库已添加码库已添加码库已添加码库已添加码库已添加码库已添加码库已添加"
+                android:textColor="@color/subtitle"
+                android:textSize="@dimen/s_text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_window"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <View
+        android:id="@+id/llt_content"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/bg_window" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <include layout="@layout/layout_remote_key" />
+
+        <include layout="@layout/layout_num_key" />
+
+        <include layout="@layout/layout_tool_key2" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:background="@color/bg_item">
+
+        <TextView
+            android:id="@+id/tv_remote_key"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="遥控器"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/m_text_size" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/bg_window" />
+
+        <TextView
+            android:id="@+id/tv_num_key"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="数字键"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/m_text_size" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/bg_window" />
+
+        <TextView
+            android:id="@+id/tv_cc_key"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="其他指令"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/m_text_size" />
+    </LinearLayout>
+</LinearLayout>

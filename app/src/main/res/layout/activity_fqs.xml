@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_window"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <include layout="@layout/layout_title" />
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="@dimen/item_margin"-->
+<!--        android:layout_marginTop="@dimen/item_padding"-->
+<!--        android:layout_marginRight="@dimen/item_margin"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <EditText-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="@dimen/btn_height"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/shape_item"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:hint="请输入关键字"-->
+<!--            android:padding="@dimen/item_padding"-->
+<!--            android:textColor="@color/main_text"-->
+<!--            android:textColorHint="@color/hint_text"-->
+<!--            android:textSize="@dimen/s_text_size" />-->
+
+<!--    </LinearLayout>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_marginTop="@dimen/item_padding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/item_margin"
+        android:layout_marginRight="@dimen/item_margin" />
+</LinearLayout>
